@@ -26,10 +26,12 @@ export class ListClient implements OnInit{
   constructor(private clientService: ClientServices) {}
 
   ngOnInit(): void {
-    this.loadClients();
+    this.getClients();
   }
 
-  loadClients() {
+  listClients: Client[] = [];
+
+  getClients() {
     this.clientService.getClient().subscribe(data => {
       this.clients = data;
     });
@@ -37,7 +39,7 @@ export class ListClient implements OnInit{
 
   deleteClient(id: number) {
     this.clientService.deleteClient(id).subscribe(() => {
-      this.loadClients();
+      this.getClients();
     });
   }
 

@@ -1,3 +1,12 @@
 {
-    "clients" : []
+  "clients": [
+    {
+      "name": "Jerbasio Perales",
+      "email": "acha@gmail.com",
+      "phone": "1234567890",
+      "address": "321 S 590 E",
+      "nationality": "American",
+      "id": 1
+    }
+  ]
 }
