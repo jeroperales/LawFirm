@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { ListClient } from './components/list-client/list-client';
-import { AddClient } from './components/add-client/add-client';
 import { FormClient } from './components/form-client/form-client';
+import { PageClient } from './components/page-client/page-client';
 
 export const routes: Routes = [
     {
@@ -9,11 +9,7 @@ export const routes: Routes = [
         component: ListClient
     },
     {
-        path: 'add',
-        component: AddClient
-    },
-    {
-        path: 'form',
-        component: FormClient
+        path: 'page',
+        component: PageClient
     }
 ];

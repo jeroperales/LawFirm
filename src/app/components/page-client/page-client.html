@@ -1,0 +1,9 @@
+<H1>Law Firm Clients</H1>
+
+<app-form-client (clientAdded)="getClients()">     </app-form-client>
+
+<app-list-client 
+[clients]="listClients"
+(deleteClient)="deleteCliente($event)">
+
+</app-list-client>

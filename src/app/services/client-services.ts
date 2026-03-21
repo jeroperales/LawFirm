@@ -29,5 +29,10 @@ private apiUrl = 'http://localhost:3000/clients';
     deleteClient(id: number): Observable<void>{
       return this.http.delete<void>(`${this.apiUrl}/${id}`);
     }
+
+    //UPDATE
+     updateClient(client: Client): Observable<Client> {
+    return this.http.put<Client>(`${this.apiUrl}/${client.id}`, client);
+  }
   
 }

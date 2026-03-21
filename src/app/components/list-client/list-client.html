@@ -1,13 +1,18 @@
 <section>
-    <h2>CLIENTS!</h2>
-    <ul>    
-        @for (item of clients; track $index) {
-            <li> Name: {{item.name}} </li>
-            <li> Address: {{item.address}} </li>
-            <li> Email: {{item.email}} </li>
-            <li> Phone: {{item.phone}} </li>
-        }
-    </ul>
+  <h2>CLIENTS!</h2>
 
+  <ul>    
+    @for (item of clients; track item.id) {
+      <li>
+        <strong>{{item.name}}</strong><br>
+        Address: {{item.address}}<br>
+        Email: {{item.email}}<br>
+        Phone: {{item.phone}}<br>
 
+        <button (click)="onDelete(item.id!)">
+          Delete
+        </button>
+      </li>
+    }
+  </ul>
 </section>
