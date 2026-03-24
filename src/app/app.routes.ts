@@ -5,11 +5,11 @@ import { PageClient } from './components/page-client/page-client';
 
 export const routes: Routes = [
     {
-        path: 'list',
+        path: 'clients',
         component: ListClient
     },
     {
-        path: 'page',
+        path: 'add',
         component: PageClient
     }
 ];

@@ -1,18 +1,42 @@
-<section>
-  <h2>CLIENTS!</h2>
+<section class="page">
+  <div class="card">
 
-  <ul>    
-    @for (item of clients; track item.id) {
-      <li>
-        <strong>{{item.name}}</strong><br>
-        Address: {{item.address}}<br>
-        Email: {{item.email}}<br>
-        Phone: {{item.phone}}<br>
+    <div class="header-row">
+      <h2>Clientes</h2>
+      <span class="count">{{ clients.length }} total</span>
+    </div>
 
-        <button (click)="onDelete(item.id!)">
-          Delete
-        </button>
-      </li>
-    }
-  </ul>
+    <div class="list">
+
+      @for (item of clients; track item.id) {
+        <div class="list-item">
+
+          <div class="info">
+            <div class="name">{{ item.name }}</div>
+
+            <div class="details">
+              <span>{{ item.email }}</span>
+              <span>{{ item.phone }}</span>
+              <span>{{ item.address }}</span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn-danger" (click)="onDelete(item.id!)">
+              Delete
+            </button>
+          </div>
+
+        </div>
+      }
+
+    </div>
+
+  </div>
 </section>
+
+@if (clients.length === 0) {
+  <div class="empty">
+    No clients yet.
+  </div>
+}

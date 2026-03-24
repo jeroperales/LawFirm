@@ -1,0 +1,84 @@
+/* Header stays same */
+.header {
+  background-color: #0f172a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 70px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.logo img {
+  height: 35px;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #cbd5e1;
+  transition: 0.2s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: white;
+}
+
+/* Search */
+.search {
+  flex: 1; /* THIS is key → pushes everything nicely */
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  width: 100%;
+  max-width: 300px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+
+  background-color: #1e293b;
+  color: white;
+}
+
+.search input::placeholder {
+  color: #94a3b8;
+}
+
+/* Button */
+.actions .btn-primary {
+  background-color: #3b82f6;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}

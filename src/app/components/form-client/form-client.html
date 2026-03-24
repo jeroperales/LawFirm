@@ -1,11 +1,36 @@
-<h2>Add Client</h2>
+<div class="card form-container">
+  <h2>Agregar Cliente</h2>
 
-<form [formGroup]="form" (ngSubmit)="submit()">
-  <input formControlName="name" placeholder="Name" />
-  <input formControlName="email" placeholder="Email" />
-  <input formControlName="phone" placeholder="Phone" />
-  <input formControlName="address" placeholder="Address" />
-  <input formControlName="nationality" placeholder="Nationality" />
+  <form [formGroup]="form" (ngSubmit)="submit()">
 
-  <button type="submit">Add</button>
-</form>
+    <div class="form-group">
+      <label>Nombre</label>
+      <input class="input" formControlName="name" placeholder="John Doe" />
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input class="input" formControlName="email" placeholder="example@mail.com" />
+    </div>
+
+    <div class="form-group">
+      <label>Teléfono</label>
+      <input class="input" formControlName="phone" placeholder="+1 234 567 890" />
+    </div>
+
+    <div class="form-group">
+      <label>Dirección</label>
+      <input class="input" formControlName="address" placeholder="Street 123" />
+    </div>
+
+    <div class="form-group">
+      <label>Nacionalidad</label>
+      <input class="input" formControlName="nationality" placeholder="Argentina" />
+    </div>
+
+    <button class="btn-primary" type="submit">
+      Guardar Cliente
+    </button>
+
+  </form>
+</div>
