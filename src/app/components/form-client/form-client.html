@@ -1,10 +1,10 @@
 <div class="card form-container">
-  <h2>Agregar Cliente</h2>
+  <h2>Add Client</h2>
 
   <form [formGroup]="form" (ngSubmit)="submit()">
 
     <div class="form-group">
-      <label>Nombre</label>
+      <label>Name</label>
       <input class="input" formControlName="name" placeholder="John Doe" />
     </div>
 
@@ -14,22 +14,22 @@
     </div>
 
     <div class="form-group">
-      <label>Teléfono</label>
+      <label>Phone Number</label>
       <input class="input" formControlName="phone" placeholder="+1 234 567 890" />
     </div>
 
     <div class="form-group">
-      <label>Dirección</label>
+      <label>Address</label>
       <input class="input" formControlName="address" placeholder="Street 123" />
     </div>
 
     <div class="form-group">
-      <label>Nacionalidad</label>
+      <label>Nationality</label>
       <input class="input" formControlName="nationality" placeholder="Argentina" />
     </div>
 
     <button class="btn-primary" type="submit">
-      Guardar Cliente
+      Save Client
     </button>
 
   </form>
